@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carts</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <ul class="timeline">
+        <li><a href="#" class="step">Cart</a></li>
+        <li><a href="#" class="step">Customer Information</a></li>
+        <li><a href="#" class="step">Shipping Method</a></li>
+        <li><a href="#" class="step active">Payement Method</a></li>
+      </ul>
+    </nav>
+    <div class="order-wrapper">
+      <div class="box order-details">
+        <div class="items flex">
+          <div class="photo-box">
+            <img src="img/order.jpg" alt="order photo" class="photo">
+          </div>
+          <p class="name bold">Chocolate bar</p>
+          <p class="price bold">$2.49</p>
+        </div>
+        <div class="price-details">
+          <div class="detail-box flex">
+            <p class="small">Subtotal</p>
+            <p class="price small">$4.98</p>
+          </div>
+          <div class="detail-box flex">
+            <p class="small">Shipping</p>
+            <p class="price small">$3.00</p>
+          </div>
+        </div>
+        <div class="total flex">
+          <p class="small">Total</p>
+          <p class="price bold">$7.98</p>
+        </div>
+      </div>
+      <div class="box payement-information">
+        <h1 class="title">Payment information</h1>
+        <form action="" class="form">
+          <div class="input-box number-box">
+            <label for="card-number" class="label">Card number</label>
+            <input type="text" name="card-number" id="card-number" placeholder="**** **** **** ****" class="input card-number">
+          </div>
+          <div class="input-box holder-box">
+            <label for="card-holder" class="label">Card holder</label>
+            <input type="text" name="card-holder" id="card-holder" placeholder="Michael Jordan" class="input card-holder">
+          </div>
+          <div class="input-box exp-box">
+            <label for="card-exp" class="label">Exp. date</label>
+            <input type="text" name="card-exp" id="card-exp" placeholder="03/19" class="input card-exp">
+          </div>
+          <div class="input-box cvc-box">
+            <label for="card-cvc" class="label">Cvc</label>
+            <input type="text" name="card-cvc" id="card-cvc" placeholder="***" class="input card-cvc">
+          </div>
+        </form>
+      </div>
+      <div class="box billing-address">
+        <h1 class="title">Billing address</h1>
+        <label for="same" class="label">Same as the shipping address
+          <input type="radio" name="billing-address" id="same" class="checkbox">
+          <span class="new-radio"></span>
+        </label>
+        <label for="different" class="label">Use a different billing adrress
+          <input type="radio" name="billing-address" id="different" class="checkbox">
+          <span class="new-radio"></span>
+        </label>
+      </div>
+      <div class="buttons-box">
+        <a href="#" class="return">Return to shipping method</a>
+        <button class="complete">Complete order</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

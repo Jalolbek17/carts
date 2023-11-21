@@ -1,0 +1,391 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+li {
+  list-style: none;
+}
+
+input, button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.small {
+  font-size: .9rem;
+}
+
+/* COLORS */
+/* MEDIA QUERIES */
+/* FONT SIZE */
+html {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 590px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* BODY */
+body {
+  background-color: #FAFAFA;
+  padding: 1.4rem;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1365px;
+}
+
+.container .nav {
+  margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 980px) {
+  .container .nav {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.container .nav .timeline li {
+  display: inline-block;
+}
+
+.container .nav .timeline li:not(:last-child)::after {
+  content: " -";
+  margin: 0 .15rem;
+}
+
+.container .nav .timeline .step {
+  color: #979797;
+  font-size: .7rem;
+  padding: .2rem 0;
+}
+
+@media screen and (min-width: 590px) {
+  .container .nav .timeline .step {
+    font-size: .8rem;
+  }
+}
+
+.container .nav .timeline .step.active {
+  font-weight: 500;
+  color: #000000;
+}
+
+.container .order-wrapper {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.85rem;
+}
+
+@media screen and (min-width: 980px) {
+  .container .order-wrapper {
+    -ms-grid-columns: 60% calc(40% - 1.85rem);
+        grid-template-columns: 60% calc(40% - 1.85rem);
+  }
+}
+
+.container .order-wrapper .box {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.container .order-wrapper .box .title {
+  font-weight: 500;
+  font-size: 1.9rem;
+  margin-bottom: 2.6rem;
+}
+
+@media screen and (min-width: 980px) {
+  .container .order-wrapper .order-details {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+}
+
+.container .order-wrapper .order-details .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .order-wrapper .order-details .items .photo-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  padding: .65rem .6rem;
+  border-radius: 4px;
+  border: 1px solid #DEDEDE;
+}
+
+.container .order-wrapper .order-details .items .photo-box::after {
+  content: "2";
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  text-align: center;
+  line-height: 21px;
+  border-radius: 50%;
+  font-size: .7rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  width: 21px;
+  height: 21px;
+  background-color: #5F86ED;
+}
+
+.container .order-wrapper .order-details .items .photo-box .photo {
+  display: block;
+  width: 35px;
+}
+
+.container .order-wrapper .order-details .items .name {
+  width: 100%;
+  margin-left: 1.4rem;
+}
+
+.container .order-wrapper .order-details .price-details {
+  padding: 1.3rem 0;
+  margin: 1.3rem 0;
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.container .order-wrapper .order-details .price-details .detail-box:first-child {
+  margin-bottom: .7rem;
+}
+
+.container .order-wrapper .order-details .total .price {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 980px) {
+  .container .order-wrapper .payement-information {
+    grid-columns: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+}
+
+.container .order-wrapper .payement-information .form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  gap: 1.45rem 1.3rem;
+}
+
+@media screen and (min-width: 590px) {
+  .container .order-wrapper .payement-information .form {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+.container .order-wrapper .payement-information .form .input-box {
+  width: 100%;
+}
+
+.container .order-wrapper .payement-information .form .input-box.number-box {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+@media screen and (min-width: 590px) {
+  .container .order-wrapper .payement-information .form .input-box.number-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / 6;
+  }
+}
+
+.container .order-wrapper .payement-information .form .input-box.holder-box {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+@media screen and (min-width: 590px) {
+  .container .order-wrapper .payement-information .form .input-box.holder-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+  }
+}
+
+.container .order-wrapper .payement-information .form .input-box .label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .85rem;
+  color: #979797;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.container .order-wrapper .payement-information .form .input-box .input {
+  border: 2px solid #DEDEDE;
+  border-radius: 3px;
+  padding: .7rem;
+  width: 100%;
+  -webkit-transition: border-color .1s;
+  transition: border-color .1s;
+}
+
+.container .order-wrapper .payement-information .form .input-box .input:focus {
+  border-color: #929292;
+}
+
+.container .order-wrapper .billing-address {
+  padding: 0;
+}
+
+.container .order-wrapper .billing-address .title {
+  margin: 2rem 2rem 1.8rem 2rem;
+}
+
+.container .order-wrapper .billing-address .label {
+  display: block;
+  clear: both;
+  cursor: pointer;
+  padding: 1.6rem 1.5rem;
+}
+
+.container .order-wrapper .billing-address .label:first-child {
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.container .order-wrapper .billing-address .label:last-child {
+  border-top: 1px solid #DEDEDE;
+}
+
+.container .order-wrapper .billing-address .label:hover .new-radio {
+  background-color: #eee;
+}
+
+.container .order-wrapper .billing-address .label .new-radio {
+  position: relative;
+  float: left;
+  margin: -3px .8rem 0 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #DEDEDE;
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+.container .order-wrapper .billing-address .label .new-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #5F86ED;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+.container .order-wrapper .billing-address .checkbox {
+  display: none;
+}
+
+.container .order-wrapper .billing-address .checkbox:checked ~ .new-radio::after {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.container .order-wrapper .buttons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 980px) {
+  .container .order-wrapper .buttons-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+}
+
+.container .order-wrapper .buttons-box .return {
+  font-size: .9rem;
+  color: #5F86ED;
+}
+
+.container .order-wrapper .buttons-box .return:hover {
+  text-decoration: underline;
+}
+
+.container .order-wrapper .buttons-box .complete {
+  background-color: #5F86ED;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: .9rem;
+  border-radius: 4px;
+  padding: .8rem 1.6rem;
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+.container .order-wrapper .buttons-box .complete:hover {
+  background-color: #466ace;
+}
+/*# sourceMappingURL=main.css.map */

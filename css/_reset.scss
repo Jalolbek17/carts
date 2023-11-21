@@ -1,0 +1,42 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+li {
+    list-style: none;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.small {
+    font-size: .9rem;
+}
+
+/* COLORS */
+
+$bg: #FAFAFA;
+$white: #FFFFFF;
+$black: #000000;
+$gray: #979797;
+$light-gray: #DEDEDE;
+$primary-blue: #5F86ED;
+$primary-blue-hover: #466ace;
